@@ -37,8 +37,6 @@ export class MainComponent implements AfterViewInit {
     await setTimeout(() => {
       this.selectNavItem('home');
     }, 600);
-
-    // testi
   }
   async toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
