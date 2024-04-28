@@ -33,14 +33,14 @@
           ><i class="fa fa-user"></i>About</a
         >
       </li>
-      <li class="nav-item" (click)="selectNavItem('service')">
-        <a class="nav-link" (click)="navigate('service')"
-          ><i class="fas fa-handshake"></i>Service</a
+      <li class="nav-item" (click)="selectNavItem('experience')">
+        <a class="nav-link" (click)="navigate('experience')"
+          ><i class="fas fa-handshake"></i>Experience</a
         >
       </li>
-      <li class="nav-item" (click)="selectNavItem('projects')">
-        <a class="nav-link" (click)="navigate('projects')"
-          ><i class="fa fa-code"></i>Projects</a
+      <li class="nav-item" (click)="selectNavItem('skills')">
+        <a class="nav-link" (click)="navigate('skills')"
+          ><i class="fa fa-code"></i>Skills</a
         >
       </li>
       <li class="nav-item" (click)="selectNavItem('contact')">
@@ -56,10 +56,10 @@
 <br /><br /><app-hero></app-hero>
 
 <app-about></app-about><br /><br />
-<app-experience></app-experience>
+<app-experience> #experience</app-experience>
 <br />
 <br />
-<app-skill #skill class="skillls"></app-skill>
+<app-skill #skills class="skillls"></app-skill>
 
 <!-- <app-my-service></app-my-service> -->
 

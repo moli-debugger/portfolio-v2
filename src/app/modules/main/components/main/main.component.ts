@@ -1,6 +1,4 @@
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import {
-  AfterContentChecked,
   AfterViewInit,
   Component,
   ElementRef,
@@ -13,7 +11,6 @@ import { CommonModule } from '@angular/common';
 import { ExperienceComponent } from '../experience/experience.component';
 import { HeroComponent } from '../hero/hero.component';
 import { SkillComponent } from '../skill/skill.component';
-import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -34,11 +31,7 @@ export class MainComponent implements AfterViewInit {
   isNavbarCollapsed = false;
   activeItem: HTMLElement | undefined;
 
-  constructor(
-    private renderer: Renderer2,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private renderer: Renderer2) {}
 
   async ngAfterViewInit() {
     await setTimeout(() => {
@@ -47,14 +40,19 @@ export class MainComponent implements AfterViewInit {
 
     // testi
   }
-  toggleNavbar() {
+  async toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
+    // if (this.activeItem) {
+    //   this.selectNavItem(this.activeItem.innerText.toLowerCase());
+    //   this.navigate(this.activeItem.innerText.toLowerCase());
+    // }
+    // await setTimeout(() => {
+    //   this.selectNavItem('home');
+    // }, 400);
   }
 
   selectNavItem(item: string) {
-    // console.log(item, 'item');
     if (this.navItems) {
-      // console.log(this.navItems);
       this.navItems.nativeElement.childNodes.forEach((navItem: any) => {
         this.renderer.removeClass(navItem, 'active');
       });
@@ -66,10 +64,8 @@ export class MainComponent implements AfterViewInit {
         return navItemContent.includes(item.toLowerCase());
       });
       if (targetNavItem) {
-        // console.log('targetNavItem', targetNavItem);
         this.renderer.addClass(targetNavItem, 'active');
         this.updateSelector();
-        // this.navigate(targetNavItem.innerText);
       }
     }
   }
@@ -83,9 +79,6 @@ export class MainComponent implements AfterViewInit {
         }
       });
       if (this.activeItem && this.activeItem instanceof HTMLElement) {
-        let mk = this.activeItem as HTMLElement;
-        console.log(typeof mk);
-
         const itemPosition = this.activeItem.getBoundingClientRect();
         const navbarPosition =
           this.navItems.nativeElement.getBoundingClientRect();
