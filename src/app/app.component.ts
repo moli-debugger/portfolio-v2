@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { HeroComponent } from './modules/main/components/hero/hero.component';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+
 import { MainComponent } from './modules/main/components/main/main.component';
 import { RouterOutlet } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'moliPortfolioV2';
+  title = 'moli Portfolio';
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 }

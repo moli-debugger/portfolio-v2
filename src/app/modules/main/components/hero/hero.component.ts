@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
-export class HeroComponent implements OnInit {
+export class HeroComponent implements AfterViewInit {
   phrases: string[] = [
     'Fullstack developer.',
     'speaker.',
@@ -19,7 +19,7 @@ export class HeroComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.rotateText();
   }
 
