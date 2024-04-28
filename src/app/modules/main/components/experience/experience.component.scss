@@ -14,7 +14,6 @@
     height: 100%;
     transition: 0.6s;
     z-index: 0;
-    background-color: #4f46e5;
   }
 
   &:hover {
@@ -25,25 +24,32 @@
     bottom: 0;
     right: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
-    background: url("../../../../../assets/image/Image.jpg");
+    background-image: url("./../../../../../assets/image/About/1.jpg");
+    background-size: cover;
   }
 
   &:nth-child(2)::before {
     bottom: 0;
     left: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+    background-image: url("./../../../../../assets/image/About/2.jpg");
+    background-size: cover;
   }
 
   &:nth-child(3)::before {
     top: 0;
     right: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+    background: url("../../../../../assets/image/About/8.jpg");
+    background-size: cover;
   }
 
   &:nth-child(4)::before {
     top: 0;
     left: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+    background: url("../../../../../assets/image/About/6.png");
+    background-size: cover;
   }
 
   p {
@@ -54,9 +60,16 @@
 .card:hover::before {
   clip-path: circle(110vw at 100% 100%);
 }
+.card:nth-child(2):hover P {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
 
 .card:hover p {
-  color: #fff;
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
 }
 
 .circle {
@@ -69,32 +82,35 @@
 }
 
 .card:nth-child(1) .circle {
-  background: url("./../../../../../assets/image/Image.jpg") no-repeat 100% 100% /
-    cover;
+  background: url("./../../../../../assets/image/About/1.jpg") no-repeat cover;
   bottom: 0;
   right: 0;
   clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
 }
 
 .card:nth-child(2) .circle {
-  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat 50% 50% / cover;
+  background: url("../../../../../assets/image/About/2.jpg") no-repeat;
+  background-size: cover;
   bottom: 0;
   left: 0;
   clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
 }
 .card:nth-child(3) .circle {
-  background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat 50% 50% / cover;
+  background: url("../../../../../assets/image/About/8.jpg") no-repeat;
+  background-size: cover;
   top: 0;
   right: 0;
   clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
 }
 
 .card:nth-child(4) .circle {
-  background: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat 50% 50% / cover;
+  background: url("../../../../../assets/image/About/6.png") no-repeat;
+  background-size: cover;
   top: 0;
   left: 0;
   clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+}
+
+.bg-card {
+  background-color: #0f4c75;
 }

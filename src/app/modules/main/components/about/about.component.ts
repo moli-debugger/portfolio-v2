@@ -19,7 +19,7 @@ export class AboutComponent {
   isHovered: boolean = false;
   currentImageUrlIndex = 0;
   imageUrls = [
-    '../../assets/image/About/1.jpg',
+    '../../assets/image/Image.jpg',
     '../../assets/image/About/2.jpg',
     '../../assets/image/About/3.jpg',
     '../../assets/image/About/4.png',
