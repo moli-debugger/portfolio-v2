@@ -1,0 +1,64 @@
+<!--top nav-bar-->
+<!-- navbar.component.html -->
+
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+  <a class="navbar-brand navbar-logo">Moli's Portfolio</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="toggleNavbar()"
+  >
+    <i class="fas fa-bars text-white"></i>
+  </button>
+  <div
+    class="collapse navbar-collapse"
+    id="navbarSupportedContent"
+    [ngClass]="{ show: isNavbarCollapsed == true }"
+  >
+    <ul class="navbar-nav ml-auto" #navItems>
+      <div class="hori-selector" [style]="selectorStyle">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <li class="nav-item" (click)="selectNavItem('home')">
+        <a class="nav-link" (click)="navigate('home')"
+          ><i class="fas fa-home"></i>Home</a
+        >
+      </li>
+      <li class="nav-item" (click)="selectNavItem('about')">
+        <a class="nav-link" (click)="navigate('about')"
+          ><i class="fa fa-user"></i>About</a
+        >
+      </li>
+      <li class="nav-item" (click)="selectNavItem('service')">
+        <a class="nav-link" (click)="navigate('service')"
+          ><i class="fas fa-handshake"></i>Service</a
+        >
+      </li>
+      <li class="nav-item" (click)="selectNavItem('projects')">
+        <a class="nav-link" (click)="navigate('projects')"
+          ><i class="fa fa-code"></i>Projects</a
+        >
+      </li>
+      <li class="nav-item" (click)="selectNavItem('contact')">
+        <a class="nav-link" (click)="navigate('home')"
+          ><i class="fa fa-mobile"></i>Contact</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- --------------------------------------INTRO------------------------------------------------- -->
+<br /><br /><app-hero></app-hero>
+
+<app-about></app-about><br /><br />
+<app-experience></app-experience>
+<!-- <app-skill></app-skill> -->
+
+<!-- <app-my-service></app-my-service> -->
+
+<!-- <app-projects></app-projects> -->

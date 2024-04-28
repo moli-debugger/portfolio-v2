@@ -1,0 +1,82 @@
+<p>asas</p>
+<div class="about-me about-me-block">
+  <!-- <img src="../../../../assets/image/layer.svg" class="layer" /> -->
+  <!-- <div>
+    <img src="../../../../assets/image/aboutSide.svg" class="about-side-img" />
+  </div> -->
+
+  <div
+    class="about-container"
+    (mouseenter)="toggleSpin()"
+    (mouseleave)="toggleSpin()"
+    id="about"
+    style="
+      background-image: url('../../../../assets/image/layer.svg');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    "
+  >
+    <!-- <img src="../../assets/image/session-img.png" /> -->
+    <div class="box-container">
+      <div
+        id="border-back"
+        #borderBack
+        [class.spin]="isHovered"
+        [class.spin-visible]="isHovered"
+      ></div>
+      <img [src]="imageUrls[currentImageUrlIndex]" class="abt--image" />
+      <div
+        id="border-front"
+        #borderFront
+        [class.spin]="isHovered"
+        [class.spin-visible]="isHovered"
+      ></div>
+    </div>
+    <!-- <div
+      id="border-back"
+      [class.spin]="isHovered"
+      (mouseenter)="toggleSpin()"
+      (mouseleave)="toggleSpin()"
+    ></div>
+    <div class="image"></div>
+    <div
+      id="border-front"
+      [class.spin]="isHovered"
+      (mouseenter)="toggleSpin()"
+      (mouseleave)="toggleSpin()"
+    ></div> -->
+
+    <div class="about-text">
+      <h4>About me</h4>
+      <p>
+        <i class="fa fa-laptop" aria-hidden="true"></i
+        ><span>Software Engineer</span>
+      </p>
+      <p>
+        <i class="fa fa-child" aria-hidden="true"></i
+        ><span>with 2.5+ years of experience</span>
+      </p>
+      <p>
+        <i class="fa fa-briefcase" aria-hidden="true"></i
+        ><span>Currently working in Kovai.co</span>
+      </p>
+
+      <p>
+        <i class="fa fa-book" aria-hidden="true"></i
+        ><span>Degree : B.SC Information Tecnology</span>
+      </p>
+      <p>
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i
+        ><span>Studied at Sri Krishna Arts and Science College</span>
+      </p>
+      <p style="padding-right: 12px">
+        <i class="fa fa-microphone" aria-hidden="true"></i
+        ><span style="color: black"
+          >Talk's about career guidance, .net core and Azure</span
+        >
+      </p>
+      <!--<a href="asset/cv.pdf" download="moli's cv"><button class="dwnld-cv"> Download CV</button></a>
+  !-->
+    </div>
+  </div>
+</div>
