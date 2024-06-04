@@ -355,9 +355,9 @@ header {
   button:active {
     transform: scale(1.1);
   }
-  button:hover {
-    transform: scale(0.5);
-  }
+  // button:hover {
+  //   transform: scale(0.5);
+  // }
 }
 
 @keyframes bounce {
